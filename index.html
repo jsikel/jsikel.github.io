@@ -77,34 +77,60 @@
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="editor-container">
-              <div class="editor python">@blckur.append_to(TestSuite)
-class GetExample(blckur.TestCase):
+              <div class="editor python">class TwitterSuite(blckur.OAuthTestSuite):
+    consumer_key = 'consumer_key'
+    consumer_secret = 'consumer_secret'
+    access_token = 'access_token'
+    access_token_secret = 'access_token_secret'
+    base_url = 'https://api.twitter.com/1.1/'
+
+@blckur.append_to(TwitterSuite)
+class GetTest(blckur.TestCase):
     method = 'GET'
-    path = '/example'
+    path = '/followers/list.json'
     expect_status = 200
-    input_json = {
-        'name': 'example',
+    input_params = {
+        'count': 200,
     }
     expect_json = {
-        'id': {'$exists': True},
-        'name': '$input.name',
-    }</div>
+        'users': {'$has': {
+            'id': {'$type': 'number'},
+            'screen_name': 'pritunl',
+            'name': {'$text': 'Pritunl'},
+            'following': True,
+        }}
+    }
+
+TwitterSuite.main()</div>
             </div>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="editor-container">
-              <div class="editor python">@blckur.append_to(TestSuite)
-class GetExample(blckur.TestCase):
-    method = 'GET'
-    path = '/example'
+              <div class="editor python">class PritunlSuite(blckur.SessionTestSuite):
+    base_url = 'http://localhost:9700'
+    method = 'POST'
+    path = '/auth/session'
     expect_status = 200
     input_json = {
-        'name': 'example',
+        'username': 'pritunl',
+        'password': 'pritunl',
     }
+
+@blckur.append_to(PritunlSuite)
+class GetStatus(blckur.TestCase):
+    method = 'GET'
+    path = '/status'
+    expect_status = 200
     expect_json = {
-        'id': {'$exists': True},
-        'name': '$input.name',
-    }</div>
+        'user_count': {'$gt': 0, '$lt': 100},
+        'users_online': 0,
+        'host_count': {'$not': {'$type': 'string'}},
+        'server_version': {'$type': 'string'},
+        'notification': '',
+        'test': {'$exists': False},
+    }
+
+PritunlSuite.main()</div>
             </div>
           </div>
         </div>
