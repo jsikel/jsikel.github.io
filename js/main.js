@@ -32,7 +32,7 @@ jQuery(document).ready(function($) {
     if ($('.navbar-collapse').hasClass('in')) {
       $('.navbar-collapse').removeClass('in').addClass('collapse');
     }
-    });
+  });
   $('.navbar-toggle').on('click', function(evt) {
     var scrollTop = $(window).scrollTop();
     if ($('.navbar-collapse').hasClass('in') &&
