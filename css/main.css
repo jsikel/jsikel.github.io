@@ -242,6 +242,21 @@ body {
   right: 0 !important;
 }
 
+.footer-box {
+  font-size: 30px;
+  padding: 15px 0;
+  float: right;
+  text-align: center;
+}
+
+.footer-box span {
+  display: inline-block;
+}
+
+.footer-box img {
+  width: 230px;
+}
+
 @media (max-width: 767px) {
   .promo {
     padding-top: 110px;
