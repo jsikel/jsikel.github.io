@@ -215,6 +215,11 @@ body {
   background-attachment: fixed;
 }
 
+.promo .buttons {
+  margin: 20px 0;
+  text-align: center;
+}
+
 .promo .editor-container {
   padding: 6px;
   padding-bottom: 10px;
