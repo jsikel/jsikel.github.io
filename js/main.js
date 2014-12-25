@@ -18,8 +18,9 @@ jQuery(document).ready(function($) {
   });
 
   $('.promo h2').fitText(1.6, {minFontSize: '30px'});
-  $('.promo p').fitText(3.2, {minFontSize: '22px'});
+  $('.promo p').fitText(3.2, {minFontSize: '26px'});
   $('.promo .editor').fitText(2.8);
+  $('.btn').fitText(1);
 
   $('a.scrollto').on('click', function(evt){
     var target = this.hash;
