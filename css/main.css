@@ -19,6 +19,30 @@ body {
   margin-bottom: 20px;
 }
 
+.btn {
+  font-size: 28px;
+  color: #6b3718;
+  background-color: #fff;
+  margin-bottom: 0;
+  width: 100%;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-transition: background-color 0.4s ease-in-out;
+  -moz-transition: background-color 0.4s ease-in-out;
+  -ms-transition: background-color 0.4s ease-in-out;
+  -o-transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #51270e;
+  background-color: #ffe1cf;
+}
+
 .navbar {
   padding: 15px 0;
   background: #fff;
