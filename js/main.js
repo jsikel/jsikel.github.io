@@ -1,7 +1,25 @@
 jQuery(document).ready(function($) {
+  $('.editor').show();
+  $('.editor.python').each(function(index, element) {
+    var editor = ace.edit(element);
+    editor.setOptions({
+      maxLines: Infinity
+    });
+    editor.setTheme('ace/theme/promo');
+    editor.setFontSize(26);
+    editor.setReadOnly(true);
+    editor.setShowPrintMargin(false);
+    editor.setHighlightActiveLine(false);
+    editor.setHighlightGutterLine(false);
+    editor.setShowFoldWidgets(false);
+    editor.getSession().setMode('ace/mode/python');
+    $(element).css('height', editor.getSession().getScreenLength() *
+      editor.renderer.lineHeight + 2);
+  });
+
   $('.promo h2').fitText(1.6, {minFontSize: '30px'});
   $('.promo p').fitText(3.2, {minFontSize: '22px'});
-  $('.promo .editor').fitText(1.8);
+  $('.promo .editor').fitText(2.8);
 
   $('a.scrollto').on('click', function(evt){
     var target = this.hash;
@@ -47,22 +65,4 @@ jQuery(document).ready(function($) {
   }
   $(window).scroll(onScroll);
   onScroll();
-
-  $('.editor').show();
-  $('.editor.python').each(function(index, element) {
-    var editor = ace.edit(element);
-    editor.setOptions({
-      maxLines: Infinity
-    });
-    editor.setTheme('ace/theme/promo');
-    editor.setFontSize(26);
-    editor.setReadOnly(true);
-    editor.setShowPrintMargin(false);
-    editor.setHighlightActiveLine(false);
-    editor.setHighlightGutterLine(false);
-    editor.setShowFoldWidgets(false);
-    editor.getSession().setMode('ace/mode/python');
-    $(element).css('height', editor.getSession().getScreenLength() *
-      editor.renderer.lineHeight + 2);
-  });
 });
