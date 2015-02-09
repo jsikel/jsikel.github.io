@@ -19,7 +19,8 @@ body {
   margin-bottom: 20px;
 }
 
-.btn {
+.btn,
+.btn:focus {
   font-size: 28px;
   color: #6b3718;
   background-color: #fff;
@@ -37,8 +38,7 @@ body {
   transition: background-color 0.4s ease-in-out;
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover {
   color: #51270e;
   background-color: #ffe1cf;
 }
