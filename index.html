@@ -11,7 +11,7 @@
 -->
 <html lang="en">
   <head>
-    <title>Blckur - REST API Testing Framework</title>
+    <title>Blikur - REST API Testing Framework</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,16 +28,11 @@
     <link rel="apple-touch-icon" sizes="120x120" href="img/logo120.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/logo152.png">
     <meta property="og:description" content="Quickly write unittests for your REST API and microservices with a familiar format based on MongoDBs query language"/>
-    <meta property="og:image" content="https://blckur.com/img/logo.png"/>
-    <meta property="og:site_name" content="Blckur"/>
+    <meta property="og:image" content="https://blikur.github.io/img/logo.png"/>
+    <meta property="og:site_name" content="Blikur"/>
     <meta property="og:title" content="REST API Testing Framework"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://blckur.com/"/>
-    <meta name="twitter:card" content="app">
-    <meta name="twitter:site" content="@blckur">
-    <meta name="twitter:domain" content="Blckur">
-    <meta name="twitter:creator" content="@blckur">
-    <meta name="twitter:image:src" content="">
+    <meta property="og:url" content="https://blikur.com/"/>
     <script src="//use.typekit.net/zlw7rmq.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
   </head>
@@ -51,13 +46,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">blckur</a>
+          <a class="navbar-brand" href="#">blikur</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://github.com/blckur/blckur" target="_blank">GitHub Project</a></li>
+            <li><a href="https://github.com/blikur/blikur" target="_blank">GitHub Project</a></li>
             <li><a href="https://twitter.com/blckur" target="_blank">Follow Blckur</a></li>
-            <li><a href="https://github.com/blckur/blckur" target="_blank">Documentation</a></li>
+            <li><a href="https://github.com/blikur/blikur" target="_blank">Documentation</a></li>
           </ul>
         </div>
       </div>
@@ -78,15 +73,15 @@
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="editor-container">
-              <div class="editor python">class TwitterSuite(blckur.OAuthTestSuite):
+              <div class="editor python">class TwitterSuite(blikur.OAuthTestSuite):
     consumer_key = 'consumer_key'
     consumer_secret = 'consumer_secret'
     access_token = 'access_token'
     access_token_secret = 'access_token_secret'
     base_url = 'https://api.twitter.com/1.1'
 
-@blckur.append_to(TwitterSuite)
-class GetTest(blckur.TestCase):
+@blikur.append_to(TwitterSuite)
+class GetTest(blikur.TestCase):
     method = 'GET'
     path = '/followers/list.json'
     expect_status = 200
@@ -107,7 +102,7 @@ TwitterSuite.main()</div>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="editor-container">
-              <div class="editor python">class PritunlSuite(blckur.SessionTestSuite):
+              <div class="editor python">class PritunlSuite(blikur.SessionTestSuite):
     base_url = 'https://localhost:9700'
     method = 'POST'
     path = '/auth/session'
@@ -117,8 +112,8 @@ TwitterSuite.main()</div>
         'password': 'pritunl',
     }
 
-@blckur.append_to(PritunlSuite)
-class GetStatus(blckur.TestCase):
+@blikur.append_to(PritunlSuite)
+class GetStatus(blikur.TestCase):
     method = 'GET'
     path = '/status'
     expect_status = 200
@@ -137,7 +132,7 @@ PritunlSuite.main()</div>
         </div>
         <div class="row">
           <div class="buttons col-md-6 col-sm-6 col-xs-12">
-            <a class="title btn btn-lg" href="https://github.com/blckur/blckur" target="_blank">GitHub Project <i class="fa fa-github-alt"></i></a>
+            <a class="title btn btn-lg" href="https://github.com/blikur/blikur" target="_blank">GitHub Project <i class="fa fa-github-alt"></i></a>
           </div>
           <div class="buttons col-md-6 col-sm-6 col-xs-12">
             <a class="title btn btn-lg" href="https://twitter.com/blckur" target="_blank">Follow Blckur <i class="fa fa-twitter"></i></a>
