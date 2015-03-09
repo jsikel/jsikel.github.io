@@ -11,14 +11,14 @@
 -->
 <html lang="en">
   <head>
-    <title>Blikur - REST API Testing Framework</title>
+    <title>Jsikel - REST API Testing Framework</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <meta name="description" content="Quickly write unittests for your REST API and microservices with a familiar format based on MongoDBs query language">
     <meta name="keywords" content="rest api testing framework, microservices testing framework, rest api testing, microservices testing, api testing, rest api unittest, microservices unittest, python unittest">
-    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7736912/708446/css/fonts.css"/>
+    <link href="//fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
@@ -28,11 +28,11 @@
     <link rel="apple-touch-icon" sizes="120x120" href="img/logo120.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/logo152.png">
     <meta property="og:description" content="Quickly write unittests for your REST API and microservices with a familiar format based on MongoDBs query language"/>
-    <meta property="og:image" content="https://blikur.github.io/img/logo.png"/>
-    <meta property="og:site_name" content="Blikur"/>
+    <meta property="og:image" content="https://jsikel.github.io/img/logo.png"/>
+    <meta property="og:site_name" content="Jsikel"/>
     <meta property="og:title" content="REST API Testing Framework"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://blikur.com/"/>
+    <meta property="og:url" content="https://jsikel.com/"/>
     <script src="//use.typekit.net/zlw7rmq.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
   </head>
@@ -46,13 +46,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">blikur</a>
+          <a class="navbar-brand" href="#">jsikel</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://github.com/blikur/blikur" target="_blank">GitHub Project</a></li>
-            <li><a href="https://twitter.com/blckur" target="_blank">Follow Blckur</a></li>
-            <li><a href="https://github.com/blikur/blikur" target="_blank">Documentation</a></li>
+            <li><a href="https://github.com/jsikel/jsikel" target="_blank">GitHub Project</a></li>
+            <li><a href="https://github.com/jsikel/jsikel" target="_blank">Documentation</a></li>
           </ul>
         </div>
       </div>
@@ -73,15 +72,15 @@
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="editor-container">
-              <div class="editor python">class TwitterSuite(blikur.OAuthTestSuite):
+              <div class="editor python">class TwitterSuite(jsikel.OAuthTestSuite):
     consumer_key = 'consumer_key'
     consumer_secret = 'consumer_secret'
     access_token = 'access_token'
     access_token_secret = 'access_token_secret'
     base_url = 'https://api.twitter.com/1.1'
 
-@blikur.append_to(TwitterSuite)
-class GetTest(blikur.TestCase):
+@jsikel.append_to(TwitterSuite)
+class GetTest(jsikel.TestCase):
     method = 'GET'
     path = '/followers/list.json'
     expect_status = 200
@@ -102,7 +101,7 @@ TwitterSuite.main()</div>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="editor-container">
-              <div class="editor python">class PritunlSuite(blikur.SessionTestSuite):
+              <div class="editor python">class PritunlSuite(jsikel.SessionTestSuite):
     base_url = 'https://localhost:9700'
     method = 'POST'
     path = '/auth/session'
@@ -112,8 +111,8 @@ TwitterSuite.main()</div>
         'password': 'pritunl',
     }
 
-@blikur.append_to(PritunlSuite)
-class GetStatus(blikur.TestCase):
+@jsikel.append_to(PritunlSuite)
+class GetStatus(jsikel.TestCase):
     method = 'GET'
     path = '/status'
     expect_status = 200
@@ -132,10 +131,10 @@ PritunlSuite.main()</div>
         </div>
         <div class="row">
           <div class="buttons col-md-6 col-sm-6 col-xs-12">
-            <a class="title btn btn-lg" href="https://github.com/blikur/blikur" target="_blank">GitHub Project <i class="fa fa-github-alt"></i></a>
+            <a class="title btn btn-lg" href="https://github.com/jsikel/jsikel" target="_blank">GitHub Project <i class="fa fa-github-alt"></i></a>
           </div>
           <div class="buttons col-md-6 col-sm-6 col-xs-12">
-            <a class="title btn btn-lg" href="https://twitter.com/blckur" target="_blank">Follow Blckur <i class="fa fa-twitter"></i></a>
+            <a class="title btn btn-lg" href="https://github.com/jsikel/jsikel" target="_blank">Documentation <i class="fa fa-book"></i></a>
           </div>
         </div>
       </div>
